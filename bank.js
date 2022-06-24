@@ -78,7 +78,6 @@ function CheckBalance() {
 //limpia una session en el localstorage
 // document.getElementById("cerrar").addEventListener("click",closeSession)
 function closeSession() {
-    let user = getSession();
     localStorage.removeItem("user");
     window.location.href="login.html"
     
