@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-bank.css">
+    <link rel="shortcut icon"
+        href="https://cdn-icons.flaticon.com/png/512/857/premium/857100.png?token=exp=1655771934~hmac=81205a93d89669d636567f5a87052adf"
+        type="image/x-icon">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script defer src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script defer src="init.js"></script>
+    <script defer src="bank.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <img src="./img/cajero-automatico.png" alt="" width="30" height="24" id="img"
+                class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="#">Banco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log in</a>
+                    </li>
+                </ul>
+                <button id="btnCloseSession" type="button" class="btn btn-outline-secondary btn-lg px-4">Close
+                    session</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+
+        <div class="px-4 py-5 bottom text-center">
+            <img class="d-block mx-auto mb-4" src="./img/cajero-automatico.png" alt="" width="72" height="57">
+            <h1 id="userName" class="display-5 fw-bold"></h1>
+            <div class="col-lg-6 mx-auto">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <span id="cash-user" class="input-group-text">0</span>
+
+
+                    <input id="inputMoney" type="text" class="form-control"
+                        aria-label="Dollar amount (with dot and two decimal places)" placeholder="Ingrese la cantidad">
+                </div>
+                <p id="text"></p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button id="btnDeposit" type="button" class="btn btn-primary btn-lg px-4 gap-3">Enter
+                        amount</button>
+                    <button id="btnWithdraw" type="button" class="btn btn-outline-secondary btn-lg px-4">Withdraw
+                        amount</button>
+                    <button id="btnCheckBalance" type="button" class="btn btn-primary btn-lg px-4 gap-3"> Check
+                        balance</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cardColor">
+
+                <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" class="logo-card">
+                <label class="label">Card number:</label>
+                <input id="cardNumber" type="text" class="input cardnumber" disabled>
+                <label class="label">Name:</label>
+                <input id="nameCard" class="input name" disabled>
+                <label class="toleft">CCV:</label>
+                <input type="text" id="userCvv" class="input toleft ccv" disabled>
+            </div>
+        </div>
+
+</body>
+
+</html>
